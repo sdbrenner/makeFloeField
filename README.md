@@ -37,7 +37,7 @@ Note that the periodic-boundary option will likely lead to unexpected results fo
 Singly-periodic boundaries are not currently suppported, but could be added in the future. 
 
 
-|<img src='/Figures/floeField_circular.png' width='400'>|<img src='/Figures/floeField_periodic.png' width='400'>|
+<img src='/Figures/floeField_circular.png' width='200'>  <img src='/Figures/floeField_periodic.png' width='200'>
 
 ### Floe size vector generation (`getFloeSizes`)
 

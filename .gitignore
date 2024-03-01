@@ -4,7 +4,7 @@
 
 # Matlab data files 
 # (THIS IS TEMPORARY)
-*.mat
+# *.mat
 
 # Example HDF5 files
 *.hdf5

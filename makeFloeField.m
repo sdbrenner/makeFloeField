@@ -46,7 +46,7 @@ targetIceArea = targetSIC*Abound;
 
 
 % Define FSD size range and properties
-minSize = 300;    % minimum floe size
+minSize = 100;    % minimum floe size
 maxSize = 1000;   % maximum floe size
 % EXAMPLE 1: 
 fsdType = "powerlaw";

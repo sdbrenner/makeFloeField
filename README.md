@@ -79,21 +79,22 @@ Chances for convergence can be increased slightly by increasing the number of "r
 
 Starting from the first entry in the floe size list (the largest floe):
 
-1. Generate a set of candidate floe positions based on the probability matrix <img src='/Figures/probability.png' width='400'>
-2. Loop through each candidate floe position
+1. Generate a set of candidate floe positions based on the probability matrix 
+	* <img src='/Figures/probability.png' width='400'>
+2. Loop through each candidate floe position; for each:
 3. Select a random floe from the floe inventory, scale floe to desired floe size and place in candidate position
 4. Check that floe doesn't overlap with other floes ("hit test")
 	* Check if any points are outside the boundary
 	* If using periodic boundary conditions, add "ghost floes" for floes crossing the boundary (tiled across opposite boundary sides)
-	* Identify "potential" overlapping floes based on bounding boxes 
+	* Identify *potential* overlapping floes based on bounding boxes (the figure below shows overlapping bounding boxes in x- OR y- directions in green, and the single potiential hit [x- AND y-] in a dashed blue line)
 	* Loop through potential hits and check for overlapping points
 	* <img src='/Figures/hittest_pass.png' width='400'> 
-5. If the placement fails, try the next candidate position (return to step 3), otherwise save floe placement and proceed to the next step. If *all* candidate positions fail, floe placement fails and the algorithm exits unsucessfully.
+5. If the placement fails, try the next candidate position (return to step 3), otherwise save floe placement and proceed to step 6. If *all* candidate positions fail, floe placement fails and the algorithm exits unsucessfully.
 6. Update probability matrix
-	* Update the binary mask 
-	<!-- <img src='/Figures/iceMask.png' width='400'>  -->
-	* get distances to existing floes
-	* decrease probability in buffer-zone around each floe
+	* Update the binary mask: 
+	* <img src='/Figures/iceMask.png' width='400'> 
+	* Calculate distances to existing floes
+	* The probability matrix is zero inside a floe, and increases with the squared-distance to other floes, but is reduced within in a buffer-zone around each floe
 7. Proceed to next floe in the list (step 1)
 
 

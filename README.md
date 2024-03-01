@@ -11,7 +11,6 @@ These fields can be used, for example, as input files to sea ice discrete elemen
 ## Files and dependencies
 
 The file `makeFloeField.m` is a master script that specifies the target parameters and calls other functions.
-Supporting functions are stored...
 
 Floe shapes are selected from an inventory of polygonal floe shapes saved in a `.mat` file. 
 The floe shape inventory `Files/floesInventory.mat` is provided as a limited example and uses a set of shapes found by tracing a satellite image of sea ice floes. 

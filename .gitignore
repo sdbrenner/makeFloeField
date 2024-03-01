@@ -1,0 +1,14 @@
+# Autosave extensions
+*.asv
+*.m~
+
+# Matlab data files 
+# (THIS IS TEMPORARY)
+*.mat
+
+# Example HDF5 files
+*.hdf5
+
+# Other:
+.DS_Store
+*.svg

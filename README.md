@@ -5,8 +5,7 @@
 These MATLAB scripts/functions can be used to generate synthetic areal fields of sea ice floes with specified sea ice concentration (SIC) and floe size distribution (FSD) within a target domain/boundary.
 These fields can be used, for example, as input files to sea ice discrete element models (DEMs) such as FloeDyn ([Rabatel et al., 2015](doi.org/10.1002/2015JC010909)) or for other analyses of surface heterogeneity in the marginal ice zone.
 
-<!-- ![floe field](/Figures/floeField.png | width=100) -->
-<img src='/Figures/floeField.png' width='300'>
+<img src='/Figures/floeField.png' width='400'>
 
 
 ## Files and dependencies
@@ -19,9 +18,8 @@ The floe shape inventory `Files/floesInventory.mat` is provided as a limited exa
 This file can be replaced by an equivalently structured file containing any number of floe shapes (which could be, for example, a more extensive satellite-derived set of floe outlines, or any other arbitrary closed polygons).
 
 These scripts/functions rely on the following MATLAB toolboxes being installed:
-
 * Image Processing Toolbox
-* Statistics and Machine Learning Toolbox (*but why?*)
+
 
 
 ## Generation procedure
@@ -38,8 +36,8 @@ The boundary can be closed (floes are fully contained within the boundary area),
 Note that the periodic-boundary option will likely lead to unexpected results for a non-rectangular boundary shape.
 Singly-periodic boundaries are not currently suppported, but could be added in the future. 
 
-![circular floe field](/Figures/floeField_circular.png)![periodic floe field](/Figures/floeField_periodic.png)
 
+|<img src='/Figures/floeField_circular.png' width='400'>|<img src='/Figures/floeField_periodic.png' width='400'>|
 
 ### Floe size vector generation (`getFloeSizes`)
 
@@ -81,7 +79,7 @@ Chances for convergence can be increased slightly by increasing the number of "r
 
 Starting from the first entry in the floe size list (the largest floe):
 
-1. Generate a set of candidate floe positions based on the probability matrix ![probability matrix](/Figures/probability.png)
+1. Generate a set of candidate floe positions based on the probability matrix <img src='/Figures/probability.png' width='400'>
 2. Loop through each candidate floe position
 3. Select a random floe from the floe inventory, scale floe to desired floe size and place in candidate position
 4. Check that floe doesn't overlap with other floes ("hit test")
@@ -89,10 +87,10 @@ Starting from the first entry in the floe size list (the largest floe):
 	* If using periodic boundary conditions, add "ghost floes" for floes crossing the boundary (tiled across opposite boundary sides)
 	* Identify "potential" overlapping floes based on bounding boxes 
 	* Loop through potential hits and check for overlapping points
-	* ![failing hit test](/Figures/hittest_fail.png) ![passing hit test](/Figures/hittest_pass.png)
+	* <img src='/Figures/hittest_pass.png' width='400'> 
 5. If the placement fails, try the next candidate position (return to step 3), otherwise save floe placement and proceed to the next step. If *all* candidate positions fail, floe placement fails and the algorithm exits unsucessfully.
 6. Update probability matrix
-	* Update the binary mask ![binary mask](/Figures/iceMask.png)
+	* Update the binary mask <img src='/Figures/iceMask.png' width='400'> 
 	* get distances to existing floes
 	* decrease probability in buffer-zone around each floe
 7. Proceed to next floe in the list (step 1)

@@ -14,9 +14,10 @@ The file `makeFloeField.m` is a master script that specifies the target paramete
 
 Floe shapes are selected from an inventory of polygonal floe shapes saved in a `.mat` file. 
 The floe shape inventory `Files/floesInventory.mat` is provided as a limited example and uses a set of shapes found by tracing a satellite image of sea ice floes. 
-This file can be replaced by an equivalently structured file containing any number of floe shapes (which could be, for example, a more extensive satellite-derived set of floe outlines, or any other arbitrary closed polygons).
+This file can be replaced by an equivalently structured file containing any number of floe shapes.
+For example, this could be a more extensive satellite-derived set of floe outlines; could be [the shape library used as input for FloeDyn](https://github.com/FloeDynHub/FloeDyn/blob/master/io/library/Biblio_Floes.mat) or other DEMs; or any other set of arbitrary polygonal shapes.
 
-These scripts/functions rely on the following MATLAB Image Processing Toolbox being installed.
+These scripts/functions rely on the MATLAB Image Processing Toolbox being installed.
 
 
 

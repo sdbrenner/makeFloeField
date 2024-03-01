@@ -91,7 +91,7 @@ Starting from the first entry in the floe size list (the largest floe):
 5. If the placement fails, try the next candidate position (return to step 3), otherwise save floe placement and proceed to the next step. If *all* candidate positions fail, floe placement fails and the algorithm exits unsucessfully.
 6. Update probability matrix
 	* Update the binary mask 
-	<img src='/Figures/iceMask.png' width='400'> 
+	<!-- <img src='/Figures/iceMask.png' width='400'>  -->
 	* get distances to existing floes
 	* decrease probability in buffer-zone around each floe
 7. Proceed to next floe in the list (step 1)

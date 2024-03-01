@@ -3,7 +3,7 @@
 ## Introduction
 
 These MATLAB scripts/functions can be used to generate synthetic areal fields of sea ice floes with specified sea ice concentration (SIC) and floe size distribution (FSD) within a target domain/boundary.
-These fields can be used, for example, as input files to sea ice discrete element models (DEMs) such as FloeDyn ([Rabatel et al., 2015](doi.org/10.1002/2015JC010909)) or for other analyses of surface heterogeneity in the marginal ice zone.
+These fields can be used, for example, as input files to sea ice discrete element models (DEMs) such as [FloeDyn](https://github.com/FloeDynHub/FloeDyn) ([Rabatel et al., 2015](doi.org/10.1002/2015JC010909)) or for other analyses of surface heterogeneity in the marginal ice zone.
 
 <img src='/Figures/floeField.png' width='400'>
 
@@ -17,8 +17,7 @@ Floe shapes are selected from an inventory of polygonal floe shapes saved in a `
 The floe shape inventory `Files/floesInventory.mat` is provided as a limited example and uses a set of shapes found by tracing images of sea ice floes. 
 This file can be replaced by an equivalently structured file containing any number of floe shapes (which could be, for example, a more extensive satellite-derived set of floe outlines, or any other arbitrary closed polygons).
 
-These scripts/functions rely on the following MATLAB toolboxes being installed:
-* Image Processing Toolbox
+These scripts/functions rely on the following MATLAB Image Processing Toolbox being installed.
 
 
 
@@ -111,10 +110,11 @@ The functions output:
 * A double array of the x-y coordinates of the floe centroids (2xN)
 * A logical array of the gridded ice cover binary mask 
 
-These outputs can be converted to an HDF5 file compatible with FloeDyn by using the provided function `makeFloeDynInput`.
-
 The `makeFloeField.m` script visualizes the floe field by converting the cell array of floe outlines to an array of polyshapes, and plotting those.
 The script can be easily modified to loop over different input parameters (e.g., different SIC) and generate sets of files
+
+These outputs can be converted to an HDF5 file compatible with [FloeDyn](https://github.com/FloeDynHub/FloeDyn) by using the provided function `makeFloeDynInput`.
+
 
 
 ## Performance

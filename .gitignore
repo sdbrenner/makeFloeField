@@ -8,6 +8,7 @@
 
 # Example HDF5 files
 *.hdf5
+*.h5
 
 # Other:
 .DS_Store

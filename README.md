@@ -84,11 +84,11 @@ Starting from the first entry in the floe size list (the largest floe):
 3. Select a random floe from the floe inventory, scale floe to desired floe size and place in candidate position
 4. Check that floe doesn't overlap with other floes ("hit test")
 	* Check if any points are outside the boundary
-	* If using periodic boundary conditions, add "ghost floes" for floes crossing the boundary (tiled across opposite boundary sides)
 	* Identify *potential* overlapping floes based on bounding boxes (the figure below shows overlapping bounding boxes in x- OR y- directions in green, and the single potiential hit [x- AND y-] in a dashed blue line)
-	* Loop through potential hits and check for overlapping points
+	* Loop through potential hits and check for overlapping points. This can be slow when looping over a large number of floes; by first subsetting to *potential* overlapping floes based on floe bounding boxes (fast), overall efficiency is significantly improved.
 	* <img src='/Figures/hittest_pass.png' width='400'> 
 5. If the placement fails, try the next candidate position (return to step 3), otherwise save floe placement and proceed to step 6. If *all* candidate positions fail, floe placement fails and the algorithm exits unsucessfully.
+	* If using periodic boundary conditions, add "ghost floes" for floes crossing the boundary (tiled across opposite boundary sides)
 6. Update probability matrix
 	* Update the binary mask: 
 	* <img src='/Figures/iceMask.png' width='400'> 

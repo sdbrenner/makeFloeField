@@ -14,7 +14,7 @@ The file `makeFloeField.m` is a master script that specifies the target paramete
 Supporting functions are stored...
 
 Floe shapes are selected from an inventory of polygonal floe shapes saved in a `.mat` file. 
-The floe shape inventory `Files/floesInventory.mat` is provided as a limited example and uses a set of shapes found by tracing images of sea ice floes. 
+The floe shape inventory `Files/floesInventory.mat` is provided as a limited example and uses a set of shapes found by tracing a satellite image of sea ice floes. 
 This file can be replaced by an equivalently structured file containing any number of floe shapes (which could be, for example, a more extensive satellite-derived set of floe outlines, or any other arbitrary closed polygons).
 
 These scripts/functions rely on the following MATLAB Image Processing Toolbox being installed.

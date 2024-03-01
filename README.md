@@ -37,7 +37,7 @@ Note that the periodic-boundary option will likely lead to unexpected results fo
 Singly-periodic boundaries are not currently suppported, but could be added in the future. 
 
 
-<img src='/Figures/floeField_circular.png' width='200'>  <img src='/Figures/floeField_periodic.png' width='200'>
+<img src='/Figures/floeField_circular.png' width='250'>  <img src='/Figures/floeField_periodic.png' width='250'>
 
 ### Floe size vector generation (`getFloeSizes`)
 
@@ -90,7 +90,8 @@ Starting from the first entry in the floe size list (the largest floe):
 	* <img src='/Figures/hittest_pass.png' width='400'> 
 5. If the placement fails, try the next candidate position (return to step 3), otherwise save floe placement and proceed to the next step. If *all* candidate positions fail, floe placement fails and the algorithm exits unsucessfully.
 6. Update probability matrix
-	* Update the binary mask <img src='/Figures/iceMask.png' width='400'> 
+	* Update the binary mask 
+	<img src='/Figures/iceMask.png' width='400'> 
 	* get distances to existing floes
 	* decrease probability in buffer-zone around each floe
 7. Proceed to next floe in the list (step 1)

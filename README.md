@@ -2,7 +2,7 @@
 
 ## Introduction
 
-These MATLAB scripts/functions can be used to generate fields of sea ice floes with specified sea ice concentration (SIC) and floe size distribution (FSD) within a target domain/boundary.
+These MATLAB scripts/functions can be used to generate synthetic areal fields of sea ice floes with specified sea ice concentration (SIC) and floe size distribution (FSD) within a target domain/boundary.
 These fields can be used, for example, as input files to sea ice discrete element models (DEMs) such as FloeDyn ([Rabatel et al., 2015]()) or for other analyses of surface heterogeneity in the marginal ice zone.
 
 ![floe field](/Figures/floeField.png)
